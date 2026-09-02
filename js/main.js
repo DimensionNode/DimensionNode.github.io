@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initMobileMenu();
     initSmoothScroll();
     initScrollAnimations();
+    initEmailCopy();
 });
 
 /* ========================================
@@ -137,4 +138,44 @@ function initScrollAnimations() {
     );
 
     elements.forEach(el => observer.observe(el));
+}
+
+/* ========================================
+   Email Clipboard Copy Interaction
+   ======================================== */
+function initEmailCopy() {
+    const copyBtn = document.getElementById('email-copy-btn');
+    const copyHint = document.getElementById('copy-hint');
+    if (!copyBtn) return;
+
+    let resetTimeout;
+    copyBtn.addEventListener('click', async () => {
+        const email = copyBtn.getAttribute('data-email') || 'dimensionnode@gmail.com';
+        try {
+            if (navigator.clipboard && window.isSecureContext) {
+                await navigator.clipboard.writeText(email);
+            } else {
+                const textarea = document.createElement('textarea');
+                textarea.value = email;
+                textarea.style.position = 'fixed';
+                textarea.style.left = '-9999px';
+                document.body.appendChild(textarea);
+                textarea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textarea);
+            }
+
+            // Visual copied feedback
+            copyBtn.classList.add('copied');
+            if (copyHint) copyHint.textContent = 'Copied to clipboard!';
+
+            clearTimeout(resetTimeout);
+            resetTimeout = setTimeout(() => {
+                copyBtn.classList.remove('copied');
+                if (copyHint) copyHint.textContent = 'Click to copy';
+            }, 2500);
+        } catch (err) {
+            console.error('Failed to copy email: ', err);
+        }
+    });
 }

@@ -146,12 +146,12 @@
 
             <div class="contact-container fade-in">
                 <p class="contact-intro">
-                    Feel free to reach out for collaborations, inquiries, or just to connect.
+                    Stay updated on our latest projects or reach out for any inquiries.
                 </p>
 
                 <div class="contact-list">
-                    <!-- Email -->
-                    <a href="mailto:dimensionnode@gmail.com" class="contact-link" aria-label="Send email">
+                    <!-- Email Copy Button -->
+                    <button type="button" class="contact-link email-copy-btn" id="email-copy-btn" aria-label="Copy email address" data-email="dimensionnode@gmail.com">
                         <div class="contact-channel">
                             <span class="channel-icon">
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
@@ -161,10 +161,13 @@
                             </span>
                             <span class="channel-name">Email</span>
                         </div>
-                        <span class="contact-handle">dimensionnode@gmail.com</span>
-                    </a>
+                        <div class="email-copy-wrapper">
+                            <span class="contact-handle" id="email-text">dimensionnode@gmail.com</span>
+                            <span class="copy-hint" id="copy-hint">Click to copy</span>
+                        </div>
+                    </button>
 
-                    <!-- X (Twitter) -->
+                    <!-- X -->
                     <a href="https://x.com/DimensionNode/" class="contact-link" target="_blank" rel="noopener noreferrer" aria-label="Visit X profile">
                         <div class="contact-channel">
                             <span class="channel-icon">
@@ -172,7 +175,7 @@
                                     <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
                                 </svg>
                             </span>
-                            <span class="channel-name">X (Twitter)</span>
+                            <span class="channel-name">X</span>
                         </div>
                         <span class="contact-handle">@DimensionNode</span>
                     </a>

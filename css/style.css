@@ -567,6 +567,11 @@ body {
     border: 1px solid var(--color-border-subtle);
     text-decoration: none;
     color: var(--color-text-primary);
+    width: 100%;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+    text-align: left;
     transition: all var(--transition);
 }
 
@@ -575,6 +580,58 @@ body {
     border-color: var(--color-gold);
     background: rgba(212, 175, 55, 0.04);
     transform: translateX(6px);
+}
+
+/* Email Copy Specifics */
+.email-copy-btn {
+    position: relative;
+    user-select: none;
+}
+
+.email-copy-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.copy-hint {
+    font-family: var(--font-cinzel);
+    font-size: 0.7rem;
+    letter-spacing: 0.18em;
+    color: var(--color-gold);
+    text-transform: uppercase;
+    opacity: 0;
+    transform: translateX(8px);
+    transition: all var(--transition);
+    pointer-events: none;
+    padding: 2px 8px;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    border-radius: 2px;
+    background: rgba(212, 175, 55, 0.05);
+}
+
+.email-copy-btn:hover .copy-hint {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.email-copy-btn.copied {
+    border-color: var(--color-gold);
+    background: rgba(212, 175, 55, 0.08);
+    box-shadow: 0 0 25px var(--color-gold-glow), 0 0 50px rgba(212, 175, 55, 0.1);
+    transform: scale(1.01);
+}
+
+.email-copy-btn.copied .contact-handle {
+    color: var(--color-gold-light);
+}
+
+.email-copy-btn.copied .copy-hint {
+    opacity: 1;
+    transform: translateX(0);
+    color: #e6c88b;
+    border-color: var(--color-gold);
+    background: rgba(212, 175, 55, 0.15);
 }
 
 .contact-channel,
