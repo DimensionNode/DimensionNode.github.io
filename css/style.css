@@ -591,7 +591,8 @@ body {
 .email-copy-wrapper {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 14px;
+    margin-left: auto;
 }
 
 .copy-hint {
@@ -600,8 +601,9 @@ body {
     letter-spacing: 0.18em;
     color: var(--color-gold);
     text-transform: uppercase;
+    white-space: nowrap;
     opacity: 0;
-    transform: translateX(8px);
+    transform: translateX(-8px);
     transition: all var(--transition);
     pointer-events: none;
     padding: 2px 8px;
