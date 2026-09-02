@@ -1,5 +1,5 @@
 /* ========================================
-   DimensionNode — Dark & Serene Art Gallery
+   DimensionNode — Dark & Serene Art Gallery Style
    ======================================== */
 
 :root {
@@ -134,7 +134,7 @@ body {
 }
 
 /* ========================================
-   Navigation — Curated Index
+   Navigation
    ======================================== */
 .navbar {
     position: fixed;
@@ -178,13 +178,13 @@ body {
 .nav-menu {
     display: flex;
     list-style: none;
-    gap: 40px;
+    gap: 36px;
     align-items: center;
 }
 
 .nav-link {
     font-family: var(--font-cinzel);
-    font-size: 0.8rem;
+    font-size: 0.825rem;
     letter-spacing: 0.2em;
     color: var(--color-text-secondary);
     text-decoration: none;
@@ -257,7 +257,7 @@ body {
 }
 
 /* ========================================
-   Hero Section — Atelier Grand Entrance
+   Hero Section
    ======================================== */
 .hero {
     min-height: 100vh;
@@ -304,8 +304,8 @@ body {
     font-size: clamp(0.95rem, 2vw, 1.15rem);
     font-weight: 300;
     color: var(--color-text-secondary);
-    letter-spacing: 0.08em;
-    max-width: 580px;
+    letter-spacing: 0.06em;
+    max-width: 620px;
     margin: 0 auto 48px;
     line-height: 1.8;
 }
@@ -367,8 +367,9 @@ body {
 }
 
 /* ========================================
-   Exhibition Section — Museum Framed Artwork
+   Games / Projects Section
    ======================================== */
+.games-grid,
 .exhibition-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -433,7 +434,7 @@ body {
     text-transform: uppercase;
 }
 
-/* Catalog Card Meta Information */
+/* Card Meta Information */
 .frame-caption {
     display: flex;
     flex-direction: column;
@@ -530,14 +531,16 @@ body {
 }
 
 /* ========================================
-   Inquiries Section — Gallery Correspondence
+   Contact Section
    ======================================== */
+.contact-container,
 .inquiries-container {
     max-width: 750px;
     margin: 0 auto;
     text-align: center;
 }
 
+.contact-intro,
 .inquiries-intro {
     font-family: var(--font-serif);
     font-size: 1.25rem;
@@ -547,12 +550,14 @@ body {
     line-height: 1.8;
 }
 
+.contact-list,
 .inquiries-list {
     display: flex;
     flex-direction: column;
     gap: 16px;
 }
 
+.contact-link,
 .inquiry-link {
     display: flex;
     justify-content: space-between;
@@ -565,12 +570,14 @@ body {
     transition: all var(--transition);
 }
 
+.contact-link:hover,
 .inquiry-link:hover {
     border-color: var(--color-gold);
     background: rgba(212, 175, 55, 0.04);
     transform: translateX(6px);
 }
 
+.contact-channel,
 .inquiry-channel {
     display: flex;
     align-items: center;
@@ -590,6 +597,7 @@ body {
     text-transform: uppercase;
 }
 
+.contact-handle,
 .inquiry-handle {
     font-family: var(--font-sans);
     font-size: 0.85rem;
@@ -597,12 +605,13 @@ body {
     transition: color var(--transition);
 }
 
+.contact-link:hover .contact-handle,
 .inquiry-link:hover .inquiry-handle {
     color: var(--color-gold-light);
 }
 
 /* ========================================
-   Footer — Archive Stamp
+   Footer
    ======================================== */
 .footer {
     padding: 60px 0;
@@ -689,6 +698,7 @@ body {
         grid-template-columns: 1fr;
     }
     
+    .contact-link,
     .inquiry-link {
         flex-direction: column;
         align-items: flex-start;
