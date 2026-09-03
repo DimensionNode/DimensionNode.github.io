@@ -827,9 +827,9 @@ a {
         margin-left: 0;
         width: 100%;
         display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        gap: 12px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
     }
 
     .email-copy-wrapper .contact-handle {
@@ -838,16 +838,21 @@ a {
 
     .email-copy-wrapper .copy-hint {
         order: 2;
-        display: none;
+        display: inline-block;
+        opacity: 0.75;
         font-size: 0.65rem;
-        letter-spacing: 0.12em;
-        padding: 2px 8px;
+        letter-spacing: 0.15em;
+        padding: 3px 8px;
+        border: 1px solid var(--color-border);
+        border-radius: 2px;
+        background: rgba(212, 175, 55, 0.06);
+        color: var(--color-gold);
+        transition: color 0.25s ease, border-color 0.25s ease, background 0.25s ease, opacity 0.25s ease;
     }
 
     .email-copy-btn.copied .copy-hint {
-        display: inline-block;
         opacity: 1;
-        color: #e6c88b;
+        color: var(--color-gold-light);
         border-color: var(--color-gold);
         background: rgba(212, 175, 55, 0.18);
     }
